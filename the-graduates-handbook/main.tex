@@ -1,7 +1,41 @@
-\documentclass{bithesis}
+\documentclass[type=master]{bithesis}
+
+\BITSetup{
+  % 在目录页中不显示摘要和主要符号对照表的标题。
+  TOC = {
+    abstract = false,
+    abstractEn = false,
+    symbols = false,
+  },
+  % 采用章节标题级别的附录格式
+  appendices / chapterLevel = true,
+}
+
+\usepackage{booktabs}
 
 \begin{document}
 
-Hello world!
+\input{cover.tex}
+
+\frontmatter
+
+\MakeTOC
+
+% 插图目录
+% \listoffigures
+% 表格目录
+% \listoftables
+%
+\newcommand{\BIThesis}{BIThesis}
+
+\mainmatter
+
+\input{ch1-intro.tex}
+
+\backmatter
+
+\input{appendices.tex}
+
+\input{acknowledgements.tex}
 
 \end{document}
