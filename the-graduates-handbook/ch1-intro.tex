@@ -1,41 +1,66 @@
 \chapter{快速使用指南}
 \label{chap:what}
 
-本手册是针对北京理工大学硕士（博士）学位论文~\LaTeX~ 模板\BIThesis{}的快速使用指南。
+本手册是针对北京理工大学硕士（博士）学位论文 \LaTeX{} 模板 \BIThesis{} 的快速使用指南。
 旨在使对 \LaTeX{} 不熟悉的同学能够快速上手 \BIThesis{} 模板，
-以便能够快速生成符合学校格式要求的硕士（博士）学位论文。
-
-本手册试图达成以下目的：
-\begin{itemize}
+以便能够快速生成符合学校格式要求的硕士（博士）学位论文。本手册试图达成以下目的：
+\begin{itemize}[noitemsep]
   \item 包含 \BIThesis{} 模板的快速使用说明。
   \item 针对部分 \LaTeX{} 语法的简单介绍。
   \item 针对不需要对 \BIThesis{} 模板进行细致修改的同学的使用指南。
   \item 针对第一次接触 \BIThesis{} 模板甚至 \LaTeX{} 的同学的使用指南。
 \end{itemize}
 
-但由于能力有限，本手册并不是：
-\begin{itemize}
-  \item \LaTeX{} 语法的详细介绍。（TODO）
-  \item \BIThesis{} 模板的详细使用、配置的说明。（TODO）
-\end{itemize}
-
-\textbf{\BIThesis{}的最新版本位于：}
+由于篇幅有限，也是为了让本手册能专注于让同学们快速上手，本手册将不会介绍
+\LaTeX{} 的详细语法和本模板的详细配置方法。\textbf{请同学们在此下载 \BIThesis{}：}
 \begin{center}
   \url{https://github.com/BITNP/BIThesis}
 \end{center}
-\section{为什么要用 \BIThesis{}}
 
-学位论文通常具有比较严格的格式要求，这是为了方便同行学术交流的起码要
-求，同时也是科学研究严谨性的体现。
-然而，由于市场各种排版软件混杂，使用者
-水平不一，学生对格式的重视程度不够，学生编写标准格式的学位论存在很多问题。
-\BIThesis{} 项目旨在提供一套开箱即用的、
-符合北京理工大学硕士（博士）学位论文的 LaTeX 模板，以助力高质量的学术写作。
-通过 \BIThesis{} 模板，学生可以轻松撰写符合学校格式要求的学位论文，可避免繁琐的论文格式调整，
-从而将关注点更多地放在高质量的内容本身。
+\section{为什么要用 \LaTeX{} 和 \BIThesis{}？}
 
-\section{安装配置环境}
+学术、学位论文有严格的格式要求。为了更多同学的方便使用，校方一般提供大家更为熟悉
+的 Word 模板。虽然 Word 确实是大家最常用的排版工具，但是：
+\begin{center}
+  \kaishu
+  如果你有足够多使用 Word 的经历，一定会体验过「同一份 Word 文档，在不同地方打开
+  就变得不同」这样的魔幻现实主义色彩的经历。
+\end{center}
 
+\LaTeX{} 是专用于高质量的学术论文排版的排版工具，能让同学们更专注于内容本身，更
+自信的排版符合格式要求的学术、学位论文。\BIThesis{} 项目旨在提供一套开箱即用的、
+符合北京理工大学硕士（博士）学位论文的\LaTeX{} 模板，以助力高质量的学术写作。通
+过 \BIThesis{} 模板，学生可以轻松撰写符合学校格式要求的学位论文，可避免繁琐的论
+文格式调整，从而将关注点更多地放在高质量的内容本身。
+
+\section{我该如何开始？}
+
+首先，\LaTeX{} 并不是像 Word 一样的一个开箱即用的软件。\LaTeX{} 本质上是一门用于
+排版的「语言」或「语法规则」。我们实际上，是以 \underline{纯文本文件}（以
+\texttt{.tex} 结尾的文件）为基础，用这样的一套 \underline{拟定好的标记语法} 来
+设定文字的格式，并 \underline{利用一些工具}，将其转化为符合格式要求的 PDF 文档。
+
+我们重新回顾一下这句话：
+
+\begin{itemize}[noitemsep]
+  \item \textbf{\underline{纯文本文件}} 意味着我们只需要创建一个以 \texttt{.tex}
+  结尾的文件，即可开始论文内容的撰写；
+  \item \textbf{\underline{拟定好的语法}} 则需要我们了解一些 \LaTeX{} 中常用的语
+  法语言规则，用来以纯文本的形式描述内容的格式，从而让下面提到的工具可以根据格式
+  需要，将文档转化为PDF。
+  \item \textbf{\underline{利用一些工具}} 也就表示我们需要这些工具（程序），来将
+  纯文本内容转化为符合格式的 PDF 文档：我们或是下载安装他们到本地，或是使用在线
+  平台开箱即用；
+\end{itemize}
+
+因此，本手册也将以这样的逻辑，为大家分别介绍每处需要的知识 --- 我们将首先介绍如
+何「安装这些工具」，并如何更舒服的创建、编写此「纯文本文件」（在自己的电脑上和使
+用在线的编辑器是不一样的）；最后，我们将简单的讲述常用的「拟定好的语法」--- 以让
+大家快速上手，使用 \BIThesis{} 撰写自己的毕业论文。
+
+\section{在自己的电脑上编写论文}
+
+% TODO: Start rewritting from here. (Spencer)
 想要使用 \BIThesis{} 模板，需要以下条件：
 \begin{itemize}
   \item 一个 \LaTeX{} 发行版。发行版提供了 \LaTeX{} 的编译器和 \LaTeX{} 语法的支持，是将 \LaTeX{} 源码编译成 PDF 文档的必要条件。
@@ -44,7 +69,7 @@
 
 \subsection{发行版选择}
 
-\begin{table}[]
+\begin{table}[htbp]
   \centering
 \begin{tabular}{@{}cccc@{}}
 \toprule
@@ -60,16 +85,14 @@
 \textbf{北京理工大学开源软件镜像服务}进行
 下载安装。
 
-% Please add the following required packages to your document preamble:
-% \usepackage{booktabs}
-\begin{table}[]
+\begin{table}[htbp]
 \begin{tabular}{@{}cll@{}}
 \toprule
 \textbf{发行版} & \multicolumn{1}{c}{\textbf{官网}}                  & \multicolumn{1}{c}{\textbf{北理镜像站}} \\ \midrule
 TeXLive      & \small{\url{https://www.tug.org/texlive/}} &     \tiny{\url{http://mirror.bit.edu.cn/CTAN/systems/texlive/
 Images/}}         \\ \midrule
     MacTeX       &  \small\url{https://www.tug.org/mactex/}   & \tiny{\url{http://mirror.bit.edu.cn/CTAN/systems/mac/mactex/}}                                 \\ \midrule
-    MikTeX       &  \small\url{https://miktex.org/}             &                              
+    MikTeX       &  \small\url{https://miktex.org/}             & \\ \bottomrule
 \end{tabular}
 \end{table}
 
@@ -77,9 +100,9 @@ Images/}}         \\ \midrule
 
 \subsection{编辑器选择}
 
-对于 TexLive 或者 MacTeX，发行版已经自带了编辑器，可直接使用。
+对于 TeXLive 或者 MacTeX，发行版已经自带了编辑器，可直接使用。
 
-如果想要使用其他编辑器如 VSCode 等，可以自行搜索并配置。
+如果想要使用其他编辑器如 VS Code 等，可以自行搜索并配置。
 
 \subsection{Overleaf 的使用说明}
 
@@ -142,4 +165,3 @@ xelatex --interaction=nonstopmode
 \subsection{完成第一次编译}
 
 \section{模板说明与 LaTeX 学习资料}
-
