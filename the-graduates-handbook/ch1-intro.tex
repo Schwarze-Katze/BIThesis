@@ -55,48 +55,49 @@
 
 因此，本手册也将以这样的逻辑，为大家分别介绍每处需要的知识 --- 我们将首先介绍如
 何「安装这些工具」，并如何更舒服的创建、编写此「纯文本文件」（在自己的电脑上和使
-用在线的编辑器是不一样的）；最后，我们将简单的讲述常用的「拟定好的语法」--- 以让
-大家快速上手，使用 \BIThesis{} 撰写自己的毕业论文。
+用在线的编辑器是不一样的）；而后，我们将在后续的章节，简单的讲述常用的「拟定好的
+语法」--- 以让大家快速上手，使用 \BIThesis{} 撰写自己的毕业论文。
 
 \section{在自己的电脑上编写论文}
 
-% TODO: Start rewritting from here. (Spencer)
-想要使用 \BIThesis{} 模板，需要以下条件：
-\begin{itemize}
-  \item 一个 \LaTeX{} 发行版。发行版提供了 \LaTeX{} 的编译器和 \LaTeX{} 语法的支持，是将 \LaTeX{} 源码编译成 PDF 文档的必要条件。
-  \item 一款 \LaTeX{} 编辑器。一个专业的编辑器提供了 \LaTeX{} 源码的编辑和预览功能。虽然不是必要的，但是使用编辑器可以大大提高 \LaTeX{} 的使用效率。
+在这里，我们将在自己的电脑上配置安装撰写 \LaTeX{} 的相关工具。首先，我们搞定
+\underline{一些工具} 的安装，来更方便的撰写 \underline{纯文本文件} 并将其转化为
+符合格式的 PDF 文档。
+
+\paragraph{一些工具的安装} 在 \LaTeX{} 的世界中，我们的「一些工具」包括将
+\LaTeX{} 源码按照格式转换为 PDF 文档的「编译器」，和支撑部分 \LaTeX{} 格式语法的
+「宏包」。我们将他们统称为一个 \LaTeX{} 发行版 --- 也就是我们需要在自己的电脑上
+安装的软件。
+
+根据同学们使用的操作系统，可以安装相应的 \LaTeX{} 发行版：
+
+\begin{itemize}[noitemsep]
+  \item \textbf{Windows 或 Linux}：下载安装 \TeX{}Live；
+  \item \textbf{macOS}：下载安装 Mac\TeX{}；
 \end{itemize}
 
-\subsection{发行版选择}
+可在对应官方网站上下载安装，也可以使用\textbf{北京理工大学开源软件镜像服务}进行
+下载安装，具体下载链接参考表~\ref{tab:download-latex}。
 
 \begin{table}[htbp]
-  \centering
-\begin{tabular}{@{}cccc@{}}
-\toprule
-\textbf{操作系统} & Windows & macOS  & Linux   \\ \midrule
-\textbf{推荐环境} & TeXLive & MacTeX & TeXLive \\ \midrule
-\textbf{发行版自带编辑器} & TeXworks & TeXShop & TeXworks \\ \bottomrule
-\end{tabular}
+\centering
+\resizebox{\textwidth}{!}{
+  \begin{tabular}{lll}
+  \toprule
+  \textbf{发行版} & \textbf{官网}                  & \textbf{北理镜像站} \\ \midrule
+  \TeX{}Live      & \url{https://www.tug.org/texlive/} &     \url{http://mirror.bit.edu.cn/CTAN/systems/texlive/Images/}         \\ \midrule
+  Mac\TeX       &  \url{https://www.tug.org/mactex/}   & \url{http://mirror.bit.edu.cn/CTAN/systems/mac/mactex/}                                 \\ \midrule
+  % MikTeX       &  \url{https://miktex.org/}             & \\ \bottomrule
+\end{tabular}}
+\caption{各操作系统下载 \LaTeX{} 发行版位置。}
+\label{tab:download-latex}
 \end{table}
 
-此外，MikTeX 也是一个不错的选择。其优点在于安装包较小，缺点在于需要用户有相关的经验。
+\paragraph{纯文本文件} 纯文本文件的撰写，
+% TODO: Continue writing from here. (Spencer)
 
-可在对应官方网站上下载安装，也可以使用
-\textbf{北京理工大学开源软件镜像服务}进行
-下载安装。
-
-\begin{table}[htbp]
-\begin{tabular}{@{}cll@{}}
-\toprule
-\textbf{发行版} & \multicolumn{1}{c}{\textbf{官网}}                  & \multicolumn{1}{c}{\textbf{北理镜像站}} \\ \midrule
-TeXLive      & \small{\url{https://www.tug.org/texlive/}} &     \tiny{\url{http://mirror.bit.edu.cn/CTAN/systems/texlive/
-Images/}}         \\ \midrule
-    MacTeX       &  \small\url{https://www.tug.org/mactex/}   & \tiny{\url{http://mirror.bit.edu.cn/CTAN/systems/mac/mactex/}}                                 \\ \midrule
-    MikTeX       &  \small\url{https://miktex.org/}             & \\ \bottomrule
-\end{tabular}
-\end{table}
-
-
+一款 \LaTeX{} 编辑器。一个专业的编辑器提供了 \LaTeX{} 源码的编辑和预览功能。虽然
+不是必要的，但是使用编辑器可以大大提高 \LaTeX{} 的使用效率。
 
 \subsection{编辑器选择}
 
@@ -104,7 +105,7 @@ Images/}}         \\ \midrule
 
 如果想要使用其他编辑器如 VS Code 等，可以自行搜索并配置。
 
-\subsection{Overleaf 的使用说明}
+\section{在线使用 Overleaf 开箱即用的编写论文}
 
 Overleaf 是一个在线的 \LaTeX{} 编辑器，可以直接在网页上进行 \LaTeX{} 的编辑和预览。
 
