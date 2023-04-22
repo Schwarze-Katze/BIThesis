@@ -13,10 +13,17 @@
 
 \usepackage{booktabs}
 \usepackage{hologo}
+\usepackage{float}
+\usepackage{caption}
+% \usepackage[nosep]{enumitem}
+
+\newcommand{\BIThesis}{BIThesis}
 
 \begin{document}
 
 \input{cover.tex}
+
+% \input{preface.tex}
 
 \frontmatter
 
@@ -27,11 +34,12 @@
 % 表格目录
 % \listoftables
 %
-\newcommand{\BIThesis}{BIThesis}
 
 \mainmatter
 
+\input{ch0-quick-start.tex}
 \input{ch1-intro.tex}
+\input{ch2-template-usage.tex}
 
 \backmatter
 

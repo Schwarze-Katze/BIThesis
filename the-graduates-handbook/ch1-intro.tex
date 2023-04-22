@@ -1,21 +1,5 @@
-\chapter{快速使用指南}
+\chapter{关于 LaTeX 和 BIThesis 的一些疑难解答}
 \label{chap:what}
-
-本手册是针对北京理工大学硕士（博士）学位论文 \LaTeX{} 模板 \BIThesis{} 的快速使用指南。
-旨在使对 \LaTeX{} 不熟悉的同学能够快速上手 \BIThesis{} 模板，
-以便能够快速生成符合学校格式要求的硕士（博士）学位论文。本手册试图达成以下目的：
-\begin{itemize}[noitemsep]
-  \item 包含 \BIThesis{} 模板的快速使用说明。
-  \item 针对部分 \LaTeX{} 语法的简单介绍。
-  \item 针对不需要对 \BIThesis{} 模板进行细致修改的同学的使用指南。
-  \item 针对第一次接触 \BIThesis{} 模板甚至 \LaTeX{} 的同学的使用指南。
-\end{itemize}
-
-由于篇幅有限，也是为了让本手册能专注于让同学们快速上手，本手册将不会介绍
-\LaTeX{} 的详细语法和本模板的详细配置方法。\textbf{请同学们在此下载 \BIThesis{}：}
-\begin{center}
-  \url{https://github.com/BITNP/BIThesis}
-\end{center}
 
 \section{为什么要用 \LaTeX{} 和 \BIThesis{}？}
 
@@ -33,7 +17,7 @@
 过 \BIThesis{} 模板，学生可以轻松撰写符合学校格式要求的学位论文，可避免繁琐的论
 文格式调整，从而将关注点更多地放在高质量的内容本身。
 
-\section{我该如何开始？}
+\section{为何需要这么多步骤，我该如何开始？}
 
 首先，\LaTeX{} 并不是像 Word 一样的一个开箱即用的软件。\LaTeX{} 本质上是一门用于
 排版的「语言」或「语法规则」。我们实际上，是以 \underline{纯文本文件}（以
@@ -94,7 +78,7 @@
 有关在线编辑平台 Overleaf 的相关内容，请继续阅读~\ref{sec:online-overleaf} 节；
 否则，大家可以直接跳转到~\ref{sec:using-bithesis} 节，了解模板的使用方法。
 
-\section{在线使用 Overleaf 开箱即用的编写论文}
+\section{本地编辑或是 Overleaf 在线平台，我改使用哪一个？}
 \label{sec:online-overleaf}
 
 Overleaf 是一个在线的 \LaTeX{} 编辑器，可以直接在网页上进行 \LaTeX{} 的编辑和预
@@ -125,38 +109,3 @@ Overleaf 是一个在线的 \LaTeX{} 编辑器，可以直接在网页上进行 
   \item 选择左上角 \texttt{Menu} 以打开侧边栏。
   \item 修改 \texttt{Settings} 中 \texttt{Compiler} 一项的值为 \texttt{XeLaTeX}（默认为 \texttt{pdfLaTeX}）。
 \end{enumerate}
-
-% TODO: 提供了 Overleaf 的模板。
-\section{使用 \BIThesis{} 模板}
-\label{sec:using-bithesis}
-
-在发行版和编译器安装完成后，就可以使用 \BIThesis{}模板了。
-
-\subsection{配置编辑器（以 TeXstudio）为例}
-
-想要通过编辑器直接进行编译和预览的话，还需要进行一些配置。
-
-简单来说，从 \LaTeX{} 源码到 PDF 文档的编译过程如下：
-\begin{enumerate}
-  \item 编辑器将 \LaTeX{} 源码编译成 \LaTeX{} 语法的中间文件。
-  \item 编译器对中间文件进行进一步处理（如交叉引用、目录、索引等）。
-  \item 编译器将中间文件编译成 PDF 文档。
-\end{enumerate}
-
-因此完成流程为  \hologo{XeLaTeX} $\rightarrow$ \hologo{biber} $\rightarrow$ \hologo{XeLaTeX} $\rightarrow$ \hologo{XeLaTeX} 。其命令行执行的命令为：
-
-\begin{verbatim}
-# 第一步 xelatex
-xelatex -no-pdf --interaction=nonstopmode main
-# 第二步 biber
-biber main
-# 第三步 xelatex
-xelatex -no-pdf --interaction=nonstopmode main
-# 第四步 xelatex
-xelatex --interaction=nonstopmode
-
-\end{verbatim}
-
-\subsection{完成第一次编译}
-
-\section{模板说明与 LaTeX 学习资料}
