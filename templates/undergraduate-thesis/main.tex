@@ -27,6 +27,7 @@
 
 \documentclass[type=bachelor]{bithesis}
 
+% 此处仅列出常用的配置。全部配置用法请见「bithesis.pdf」手册。
 \BITSetup{
   cover = {
     % 在封面中载入有「北京理工大学」字样的图片，如无必要请勿改动。
@@ -35,10 +36,12 @@
     xiheiFont = STXIHEI.TTF,
     %% 使用以下参数来自定义封面日期
     % date = 2022年6月,
+    % 本科生盲审要求删去封面，而不是隐藏封面信息。
+    hideCoverInPeerReview = true,
   },
   info = {
     % 想要删除某项封面信息，直接删除该项即可。
-    % 想要让某项封面信息留空（但是保留下划线），请设置为空字符串。
+    % 想要让某项封面信息留空（但是保留下划线），请传入空白符组成的字符串，如"{~}"。
     % 如需要换行，则用 “\\” 符号分割。
     title = 北京理工大学本科生毕业设计（论文）题目,
     titleEn = {The Subject of Undergraduate Graduation Project (Thesis) of Beijing Institute of Technology},
@@ -54,9 +57,8 @@
     % externalSupervisor = 左偏树,
   },
   style = {
-    % 保持参考文献的缩进样式与 Word 模板一致。
-    % 如果你不需要此样式，请将此行注释掉。
-    bibliographyIndent = false,
+    % 开启 Windows 平台下的中易宋体伪粗体。
+    % windowsSimSunFakeBold = true,
   }
 }
 
@@ -65,6 +67,9 @@
 % 然而由于 minted 依赖 Python 的 Pygments 库作为外部依赖，因此出于模板的简洁程度考虑，我们没有提供 minted 进行代码块书写的示例。
 \usepackage{listings}
 
+
+% 大部分关于参考文献样式的修改，都可以通过此处的选项进行配置。
+% 详情请搜索「biblatex-gb7714-2015 文档」进行阅读。
 \usepackage[
   backend=biber,
   style=gb7714-2015,
@@ -80,6 +85,10 @@
 % 参考文献引用文件位于 misc/ref.bib
 \addbibresource{misc/ref.bib}
 
+% 如果要按照计算机学院的要求，
+% 在外文翻译报告中使用带有“北京理工大学”水印
+% 请使用此 issue 提供的方法：
+% https://github.com/BITNP/BIThesis/issues/350#issuecomment-1565974141
 
 % 文档开始
 \begin{document}

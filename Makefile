@@ -1,18 +1,24 @@
-# 以下命令仅能在 Linux 或 MacOS 环境下执行。
-# 如果你是 windows 用户，可以使用 git bash 或者 cygwin 来执行；
+# 以下命令仅保证能在 Linux 或 MacOS 环境下执行。
+# 如果你是 Windows 用户，可以使用 Git Bash 或者 Cygwin 来执行；
 # 或者可以考虑将此脚本移植为 PowerShell。
 PACKAGE = bithesis
 
 LATEX = xelatex
 
 SOURCES = $(PACKAGE).ins $(PACKAGE).dtx
-CLSFILE = dtx-style.sty bitart.cls bitbook.cls bitgrad.cls bitreport.cls bithesis.cls bitbeamer.cls
+CLSFILE = dtx-style.sty bitreport.cls bithesis.cls bitbeamer.cls
 
 LATEXMK = latexmk
 
 SCAFFOLDDIR = ./templates
 TESTDIR = ./tests
 EXAMPLEDIR = ./examples
+
+ifeq ($(OS), Windows_NT)
+	REGRESSION_TEST_COMMAND=pwsh ./scripts/regression-testing.ps1
+else
+	REGRESSION_TEST_COMMAND=zsh ./scripts/regression-testing.zsh
+endif
 
 
 .PHONY: all cls doc clean FORCE_MAKE copy
@@ -47,9 +53,10 @@ test: doc copy FORCE_MAKE
 	cd $(SCAFFOLDDIR)/lab-report && latexmk && cd ..
 	cd $(SCAFFOLDDIR)/presentation-slide && latexmk && cd ..
 	cd $(TESTDIR)/doctor-thesis && latexmk && cd ..
+	cd $(TESTDIR)/autorefs && latexmk && cd ..
 
 regression-test: cls
-	zsh ./scripts/regression-testing.zsh
+	$(REGRESSION_TEST_COMMAND)
 
 copy: cls
 	cp bithesis.cls $(SCAFFOLDDIR)/undergraduate-thesis
@@ -57,6 +64,7 @@ copy: cls
 	cp bithesis.cls $(SCAFFOLDDIR)/paper-translation
 	cp bithesis.cls $(SCAFFOLDDIR)/graduate-thesis
 	cp bithesis.cls $(TESTDIR)/doctor-thesis
+	cp bithesis.cls $(TESTDIR)/autorefs
 	cp bitreport.cls $(SCAFFOLDDIR)/lab-report
 	cp bitbeamer.cls $(SCAFFOLDDIR)/presentation-slide
 

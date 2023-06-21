@@ -12,6 +12,56 @@ Acronyms:
 
 **Bolded text highlights its importance.**
 
+## [3.5.4] - 2023-04-29
+
+[22fccf5](https://github.com/BITNP/BIThesis/commit/22fccf5cc1c62cc69288fdf292857d4f3c08c4bc)...[b19599b](https://github.com/BITNP/BIThesis/commit/b19599bcd5b0917120aaf05fc8961f49f54700ef)
+
+### Bug Fixes
+
+- Normal text format in subsubsection. ([20f7060](https://github.com/BITNP/BIThesis/commit/20f7060ea78b5ace3d3e04e14c8c17247246dfd8))
+
+### Documentation
+
+- Add docs for twoside warning. ([f913aa1](https://github.com/BITNP/BIThesis/commit/f913aa1fa21218b8824af959bf9247954c4b0a2d))
+
+### Miscellaneous Tasks
+
+- Update version to v3.5.4. ([b19599b](https://github.com/BITNP/BIThesis/commit/b19599bcd5b0917120aaf05fc8961f49f54700ef))
+
+### Refactor
+
+- Try fix \MakeOriginality in the plagiarism check. ([7891e26](https://github.com/BITNP/BIThesis/commit/7891e26ae9e292bef1369d727e92e54ed423f6b8))
+
+## [3.5.3] - 2023-04-23
+
+[5181d5a](https://github.com/BITNP/BIThesis/commit/5181d5a16c5e1d980abc905de8a2256c1fa282fe)...[346f11d](https://github.com/BITNP/BIThesis/commit/346f11da510b4c4d7ef10e4cb502f97aaf5865ea)
+
+### Bug Fixes
+
+- Predefine autoref label. ([16535fa](https://github.com/BITNP/BIThesis/commit/16535fa40e08dcdf9e4497ab0c2f9ee42e92ad3d))
+- Set zihao to 5 in tabular by default. ([9e58b8b](https://github.com/BITNP/BIThesis/commit/9e58b8beecba14cc8729f9b71bf99389d2b7035a))
+- Predefine autoref label. ([77bd192](https://github.com/BITNP/BIThesis/commit/77bd1926a302a5db6b17074a605ae19e33a8697d))
+
+### Documentation
+
+- Add an explaination about nosep in enumitem. ([ec3760f](https://github.com/BITNP/BIThesis/commit/ec3760f8750beb178b84a1a7cc0811a714ef21ed))
+- Add doc for misc/autoref & const/autoref. ([ccf14ed](https://github.com/BITNP/BIThesis/commit/ccf14ed2d157eac1c262d70bac9226e779edd420))
+
+### Miscellaneous Tasks
+
+- Update to v3.5.3. ([346f11d](https://github.com/BITNP/BIThesis/commit/346f11da510b4c4d7ef10e4cb502f97aaf5865ea))
+
+### Refactor
+
+- Use hbt to hint float position. ([e6788be](https://github.com/BITNP/BIThesis/commit/e6788be1116b6bc67e321fbb5c811dbb4a728b52))
+- Reduce ambiguity by remove multi-bibprint demos. ([5130df5](https://github.com/BITNP/BIThesis/commit/5130df55f4012b136fa4c87f1bae159f3900bf23))
+- Reduce ambiguity by removing multi-bibprint demos. ([42d0b18](https://github.com/BITNP/BIThesis/commit/42d0b183fb1c5ef4707cc323a81e18fa27073b32))
+
+### Testing
+
+- Add tests for autorefs. ([91d0b27](https://github.com/BITNP/BIThesis/commit/91d0b27efee2899b9cf18acc31e42558a26b1269))
+- Add tests for autorefs. ([837d3d3](https://github.com/BITNP/BIThesis/commit/837d3d3b4f51f527b7afa862cc22dc1edc5202a7))
+
 ## [3.5.2] - 2023-04-14
 
 [1f05098](https://github.com/BITNP/BIThesis/commit/1f0509853acdf6e3cd57826e936bfbf043496d94)...[9345efc](https://github.com/BITNP/BIThesis/commit/9345efcf187c3d740129e97876502b3eba2791df)
@@ -157,7 +207,7 @@ Acronyms:
 
 ## [3.3.1] - 2023-02-11
 
-[4807915](https://github.com/BITNP/BIThesis/commit/480791527043e2ccc706d688cacd0cbbde87d9a3)...[a87c4f6](https://github.com/BITNP/BIThesis/commit/a87c4f6aa450c93ef1e0b49f638262c6aa3482f6)
+[4807915](https://github.com/BITNP/BIThesis/commit/480791527043e2ccc706d688cacd0cbbde87d9a3)...[2f4aa62f](https://github.com/BITNP/BIThesis/commit/2f4aa62f8efcfe9c46b5b2e78d1cbed3a5fbc11)
 
 ### Bug Fixes
 

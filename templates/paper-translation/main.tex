@@ -26,6 +26,7 @@
 
 \documentclass[type=bachelor_translation]{bithesis}
 
+% 此处仅列出常用的配置。全部配置用法请见「bithesis.pdf」手册。
 \BITSetup{
   cover = {
     % 在封面中载入有「北京理工大学」字样的图片，如无必要请勿改动。
@@ -41,7 +42,7 @@
     title = 北京理工大学本科生毕业设计（论文）题目,
     titleEn = {The Subject of Undergraduate Graduation Project (Thesis) of Beijing Institute of Technology},
     % 想要删除某项封面信息，直接删除该项即可。
-    % 想要让某项封面信息留空（但是保留下划线），请设置为空字符串。
+    % 想要让某项封面信息留空（但是保留下划线），请传入空白符组成的字符串，如"{~}"。
     % 如需要换行，则用 “\\” 符号分割。
     school = 计算机学院,
     major = 计算机科学与技术,
@@ -56,14 +57,12 @@
     % externalSupervisor = 左偏树,
   },
   style = {
-    % 保持参考文献的缩进样式与 Word 模板一致。
-    % 如果你不需要此样式，请将此行注释掉。
-    bibliographyIndent = false,
     % head = {自定义页眉文字}
   }
 }
 
-% 有关参考文献的样式可以在此处修改；如无必要无需修改。
+% 大部分关于参考文献样式的修改，都可以通过此处的选项进行配置。
+% 详情请搜索「biblatex-gb7714-2015 文档」进行阅读。
 \usepackage[
   backend=biber,
   style=gb7714-2015,
